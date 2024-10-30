@@ -1,27 +1,18 @@
-name: Install bs4 on Self-Hosted Runner  
-  
-on:  
-  workflow_dispatch:  # 你可以根据需要选择触发条件，例如 push、pull_request 或 workflow_dispatch  
-  
-jobs:  
-  install-bs4:  
-    runs-on: [self-hosted]  # 指定使用自建 runner  
-  
-    steps:  
-    - name: Checkout code  
-      uses: actions/checkout@v3  
-  
-    - name: Set up Python  
-      uses: actions/setup-python@v3  
-      with:  
-        python-version: '3.10'  # 选择你需要的 Python 版本  
-  
-    - name: Install bs4  
-      run: |  
-        python -m pip install --upgrade pip  
-        pip install beautifulsoup4  # 安装 bs4  
-  
-    - name: Verify installation  
-      run: |  
-        python -c "from bs4 import BeautifulSoup; print(BeautifulSoup('<html></html>').prettify())"  
-        # 这是一个简单的验证步骤，确保 bs4 已正确安装
+name: Greeting on variable day
+
+on:
+  workflow_dispatch
+
+env:
+  DAY_OF_WEEK: Monday
+
+jobs:
+  greeting_job:
+    runs-on: shannabian
+    env:
+      Greeting: Hello
+    steps:
+      - name: "Say Hello Mona it's Monday"
+        run: echo "$Greeting $First_Name. Today is $DAY_OF_WEEK!"
+        env:
+          First_Name: Mona
