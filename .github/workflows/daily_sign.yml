@@ -12,7 +12,7 @@ permissions:
 jobs:
   build:
 
-    runs-on: shannabian
+    runs-on: self-hosted
 
     steps:
     - uses: actions/checkout@v3
