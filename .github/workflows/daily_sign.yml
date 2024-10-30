@@ -7,8 +7,8 @@ jobs:
      steps:
      - run: pwd
      - run: ls
-     - run :sudo apt-get update
-     - run sudo apt-get install lrzsz 
+     - run: sudo apt-get update
+     - run: sudo apt-get install lrzsz 
   job2:
       runs-on: windows-latest
       steps:
