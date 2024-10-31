@@ -11,5 +11,4 @@ jobs:
           node-version: '20'
       - run: npm install -g bats
       - run: bats -v
-    - name: Install Dependencies
-      run: npm install
+      - run: npm install
