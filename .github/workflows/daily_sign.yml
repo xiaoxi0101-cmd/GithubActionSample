@@ -1,14 +1,12 @@
-name: learn-github-actions
-on: 
-  workflow_dispatch
-jobs:
-  job1:
-     runs-on: shannabian
-     steps:
-       -
-        name: Setup Node.js
-        uses: actions/setup-node@v3 #安装node.js
-           with:
-           node-version: '16'
-
-   
+name: learn-github-actions  
+on:   
+  workflow_dispatch  
+jobs:  
+  job1:  
+    runs-on: ubuntu-latest  # 使用标准的运行器，或者替换为您的自定义运行器名称  
+    steps:  
+      -  
+        name: Setup Node.js  
+        uses: actions/setup-node@v3  # 安装 Node.js  
+        with:  
+          node-version: '16'
