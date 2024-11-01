@@ -9,8 +9,5 @@ jobs:
      - run: ls
      - run: sudo apt-get update
      - run: sudo apt-get install lrzsz wget
-  job2:
-      runs-on: windows-latest
-      steps:
-      - run: node --version
+
    
