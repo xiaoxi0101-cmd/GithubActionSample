@@ -10,3 +10,8 @@ jobs:
         uses: actions/setup-node@v3  # 安装 Node.js  
         with:  
           node-version: '16'
+      - name: install & build
+        run: |
+          echo "npm run build"
+          npm install
+          npm run build
