@@ -9,9 +9,10 @@ jobs:
      - run: ls
      - run: sudo apt-get update
      - run: sudo apt-get install lrzsz wget
-     - name: Setup Node.js
+     - 
+        name: Setup Node.js
         uses: actions/setup-node@v3 #安装node.js
-        with:
-          node-version: '16'
+           with:
+           node-version: '16'
 
    
